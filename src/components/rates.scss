@@ -1,0 +1,16 @@
+$margin-y: 2rem;
+
+.rate {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 4rem;
+  place-content: center;
+  font-size: 3rem;
+  width: 70vw;
+  height: 100%;
+  padding: 24px;
+  margin: auto;
+  margin-top: $margin-y;
+  margin-bottom: $margin-y;
+}
