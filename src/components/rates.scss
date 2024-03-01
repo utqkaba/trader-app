@@ -1,6 +1,8 @@
-$margin-y: 2rem;
+$margin-y: 3rem;
 $padding: 1rem;
+$padding-half: 0.5rem;
 $font-size: 2rem;
+$font-size-units: 1rem;
 $grid-1fr: 1fr;
 $display: grid;
 
@@ -8,7 +10,7 @@ $display: grid;
   display: $display;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: $grid-1fr;
-  grid-column-gap: 2rem;
+  grid-column-gap: 3rem;
   place-content: center;
   font-size: $font-size;
   width: 80vw;
@@ -16,7 +18,7 @@ $display: grid;
   padding: $padding;
   margin: auto;
   margin-top: $margin-y;
-  margin-bottom: $margin-y;
+  margin-bottom: $margin-y + 2rem;
 }
 
 .rate-unit {
@@ -35,9 +37,21 @@ $display: grid;
   transform: scale(1.05);
 }
 
+.rate-unit-name {
+  font-size: $font-size-units;
+  padding-bottom: $padding-half;
+  border-bottom: #f27a19 2px solid;
+  border-radius: 0.5rem;
+}
+
+.rate-unit-price {
+  padding: $padding-half;
+}
+
 .rate-change {
   display: $display;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: $grid-1fr;
   grid-template-rows: $grid-1fr;
-  font-size: $font-size - 0.5;
+  font-size: $font-size-units;
+  color: #01b90b;
 }
