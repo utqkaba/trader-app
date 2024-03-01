@@ -1,16 +1,43 @@
 $margin-y: 2rem;
+$padding: 1rem;
+$font-size: 2rem;
+$grid-1fr: 1fr;
+$display: grid;
 
 .rate {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 4rem;
+  display: $display;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: $grid-1fr;
+  grid-column-gap: 2rem;
   place-content: center;
-  font-size: 3rem;
-  width: 70vw;
+  font-size: $font-size;
+  width: 80vw;
   height: 100%;
-  padding: 24px;
+  padding: $padding;
   margin: auto;
   margin-top: $margin-y;
   margin-bottom: $margin-y;
+}
+
+.rate-unit {
+  grid-template-columns: $grid-1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: $padding;
+  border: #f27a19 2px solid;
+  border-radius: 1rem;
+  transition: transform 1s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.rate-unit:hover {
+  transform: scale(1.05);
+}
+
+.rate-change {
+  display: $display;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: $grid-1fr;
+  font-size: $font-size - 0.5;
 }

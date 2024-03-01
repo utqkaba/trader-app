@@ -5,6 +5,7 @@ $content-center: center;
 $padding: 1rem;
 $margin: auto;
 $grid-1fr: 1fr;
+$width: 40vw;
 
 .exchange {
   display: $display-view;
@@ -12,8 +13,8 @@ $grid-1fr: 1fr;
   grid-template-rows: 2fr 0.5fr 2fr;
   // grid-column-gap: $column-gap;
   // grid-column-gap: $row-gap;
-  width: 40vw;
-  height: 19vh;
+  width: $width;
+  height: 21vh; // height değerini large screenler için 19vh olarak ayarlamalıyım. responsive design gerekli.
   padding-top: $padding;
   margin: $margin;
   border: #f27a19 2px solid;
@@ -32,7 +33,7 @@ $grid-1fr: 1fr;
   display: $display-view;
   grid-template-columns: 6fr 0.5fr 6fr;
   grid-template-rows: $grid-1fr;
-  width: 40vw;
+  width: $width;
   padding: $padding;
   margin: $margin;
 }
@@ -44,6 +45,6 @@ $grid-1fr: 1fr;
 .exchange-button {
   margin-inline: $margin;
   // margin-top: 1rem/2;
-  width: 30vw;
+  width: $width - 10;
   height: 4vh;
 }
